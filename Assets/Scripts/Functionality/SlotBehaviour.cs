@@ -171,6 +171,10 @@ public class SlotBehaviour : MonoBehaviour
   private BonusController _bonusManager;
 
   private Tweener BalanceTween;
+  private int[,] initialMatrix = new int[,]
+  {
+
+  };
 
   private void Start()
   {
@@ -889,6 +893,27 @@ public class SlotBehaviour : MonoBehaviour
       }
     }
   }
+  // internal void InitializeMatrix()
+  // {
+  //   for (int row = 0; row < initialMatrix.GetLength(0); row++)
+  //   {
+  //     for (int col = 0; col < initialMatrix.GetLength(1); col++)
+  //     {
+  //       int val = initialMatrix[row, col];
+
+  //       Tempimages[col].slotImages[row].sprite = myImages[val];
+
+  //       ImageAnimation animScript = Tempimages[col].slotImages[row].GetComponent<ImageAnimation>();
+  //       if (animScript != null)
+  //       {
+  //         PopulateAnimationSprites(animScript, val);
+
+  //         animScript.StartAnimation();
+  //         TempList.Add(animScript);
+  //       }
+  //     }
+  //   }
+  // }
 
   internal void CheckWinPopups()
   {
