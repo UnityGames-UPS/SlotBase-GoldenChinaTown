@@ -1,2 +1,2 @@
-# SlotBase-GoldenChinaTown
+# Golden China Town
 Dev Branch
