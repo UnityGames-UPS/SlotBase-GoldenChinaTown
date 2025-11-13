@@ -173,7 +173,9 @@ public class SlotBehaviour : MonoBehaviour
   private Tweener BalanceTween;
   private int[,] initialMatrix = new int[,]
   {
-
+      {5,5,12,5,5 },
+      {10,10,10,10,10 },
+      {12,12,11,12,12 }
   };
 
   private void Start()
@@ -882,38 +884,38 @@ public class SlotBehaviour : MonoBehaviour
     }
   }
 
-  internal void shuffleInitialMatrix()
-  {
-    for (int i = 0; i < Tempimages.Count; i++)
-    {
-      for (int j = 0; j < 3; j++)
-      {
-        int randomIndex = UnityEngine.Random.Range(0, 14);
-        Tempimages[i].slotImages[j].sprite = myImages[randomIndex];
-      }
-    }
-  }
-  // internal void InitializeMatrix()
+  // internal void shuffleInitialMatrix()
   // {
-  //   for (int row = 0; row < initialMatrix.GetLength(0); row++)
+  //   for (int i = 0; i < Tempimages.Count; i++)
   //   {
-  //     for (int col = 0; col < initialMatrix.GetLength(1); col++)
+  //     for (int j = 0; j < 3; j++)
   //     {
-  //       int val = initialMatrix[row, col];
-
-  //       Tempimages[col].slotImages[row].sprite = myImages[val];
-
-  //       ImageAnimation animScript = Tempimages[col].slotImages[row].GetComponent<ImageAnimation>();
-  //       if (animScript != null)
-  //       {
-  //         PopulateAnimationSprites(animScript, val);
-
-  //         animScript.StartAnimation();
-  //         TempList.Add(animScript);
-  //       }
+  //       int randomIndex = UnityEngine.Random.Range(0, 14);
+  //       Tempimages[i].slotImages[j].sprite = myImages[randomIndex];
   //     }
   //   }
   // }
+  internal void InitializeMatrix()
+  {
+    for (int row = 0; row < initialMatrix.GetLength(0); row++)
+    {
+      for (int col = 0; col < initialMatrix.GetLength(1); col++)
+      {
+        int val = initialMatrix[row, col];
+
+        Tempimages[col].slotImages[row].sprite = myImages[val];
+
+        ImageAnimation animScript = Tempimages[col].slotImages[row].GetComponent<ImageAnimation>();
+        if (animScript != null)
+        {
+          PopulateAnimationSprites(animScript, val);
+
+          animScript.StartAnimation();
+          TempList.Add(animScript);
+        }
+      }
+    }
+  }
 
   internal void CheckWinPopups()
   {
