@@ -5249,6 +5249,10 @@ MonoBehaviour:
   slotManager: {fileID: 2046803210}
   uiManager: {fileID: 377874625}
   isResultdone: 0
+<<<<<<< HEAD
+=======
+  _jsManager: {fileID: 0}
+>>>>>>> 4567974 (fix: customJS + old assets + proj ver update)
   JSManager: {fileID: 1328365741}
   testToken: ab2549435ef84798bb66723089751f3e
   RaycastBlocker: {fileID: 13050930}
