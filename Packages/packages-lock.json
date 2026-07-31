@@ -54,11 +54,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.2d.common": {
-<<<<<<< HEAD
-      "version": "12.0.3",
-=======
       "version": "12.0.2",
->>>>>>> 4567974 (fix: customJS + old assets + proj ver update)
       "depth": 2,
       "source": "registry",
       "dependencies": {
@@ -130,19 +126,11 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.2d.tooling": {
-<<<<<<< HEAD
-      "version": "1.0.3",
-      "depth": 1,
-      "source": "registry",
-      "dependencies": {
-        "com.unity.2d.common": "12.0.3",
-=======
       "version": "1.0.2",
       "depth": 1,
       "source": "registry",
       "dependencies": {
         "com.unity.2d.common": "12.0.2",
->>>>>>> 4567974 (fix: customJS + old assets + proj ver update)
         "com.unity.modules.uielements": "1.0.0"
       },
       "url": "https://packages.unity.com"
@@ -196,11 +184,7 @@
         "com.unity.2d.tilemap": "1.0.0",
         "com.unity.2d.tilemap.extras": "6.0.1",
         "com.unity.2d.aseprite": "3.0.1",
-<<<<<<< HEAD
-        "com.unity.2d.tooling": "1.0.3"
-=======
         "com.unity.2d.tooling": "1.0.2"
->>>>>>> 4567974 (fix: customJS + old assets + proj ver update)
       }
     },
     "com.unity.ide.rider": {
