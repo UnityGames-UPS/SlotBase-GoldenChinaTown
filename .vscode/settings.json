@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "SlotBase-GoldenChinaTown.sln"
+    "dotnet.defaultSolution": "SlotBase-GoldenChinaTown.slnx"
 }

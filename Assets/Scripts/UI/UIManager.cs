@@ -168,6 +168,9 @@ public class UIManager : MonoBehaviour
     private AudioController audioController;
 
     [SerializeField]
+    private JSFunctCalls jsFunctCalls;
+
+    [SerializeField]
     private Button GameExit_Button;
 
     [SerializeField]
@@ -187,6 +190,20 @@ public class UIManager : MonoBehaviour
     private Tween ClosePopupTween;
 
     internal int FreeSpins;
+
+    private void Awake()
+    {
+        if (jsFunctCalls != null)
+            jsFunctCalls.RegisterVisibilityListener(gameObject.name);
+    }
+
+    public void OnFocusChanged(string value)
+    {
+        bool focused = value == "1";
+        Debug.Log("UNITY FOCUS CHANGED: " + value + " (focused: " + focused + ")");
+        audioController?.SetMuteAll(!focused);
+        socketManager?.HandleFocusChange(focused);
+    }
 
     private void Start()
     {
