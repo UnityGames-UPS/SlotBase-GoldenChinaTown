@@ -145,7 +145,7 @@ public class BonusController : MonoBehaviour
     });
   }
 
-  internal void PlayWinLooseSound(bool isWin)
+  private void PlayWinLooseSound(bool isWin)
   {
     if (isWin)
     {

@@ -30,15 +30,15 @@ public class SocketIOManager : MonoBehaviour
   //protected string TestSocketURI = "https://game-crm-rtp-backend.onrender.com/";
   protected string SocketURI = null;
   //protected string SocketURI = "https://916smq0d-5000.inc1.devtunnels.ms/";
-  [SerializeField] internal JSFunctCalls JSManager;
+  [SerializeField] private JSFunctCalls JSManager;
   [SerializeField]
   private string testToken;
 
   protected string gameID = "SL-GCT";
   //protected string gameID = "";
 
-  internal bool isLoaded = false;
-  internal bool SetInit = false;
+  private bool isLoaded = false;
+  private bool SetInit = false;
   private const int maxReconnectionAttempts = 6;
   private readonly TimeSpan reconnectionDelay = TimeSpan.FromSeconds(10);
 

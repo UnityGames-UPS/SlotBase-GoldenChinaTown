@@ -157,8 +157,8 @@ public class SlotBehaviour : MonoBehaviour
   private bool IsTurboOn;
   [SerializeField] private bool WasAutoSpinOn;
 
-  internal bool IsAutoSpin = false;
-  internal bool IsFreeSpin = false;
+  private bool IsAutoSpin = false;
+  private bool IsFreeSpin = false;
   private bool IsSpinning = false;
   internal bool CheckPopups = false;
   private bool CheckSpinAudio = false;
@@ -486,7 +486,7 @@ public class SlotBehaviour : MonoBehaviour
   }
 
   //reset the layout after populating the slots
-  internal void LayoutReset(int number)
+  private void LayoutReset(int number)
   {
     if (Slot_Elements[number]) Slot_Elements[number].ignoreLayout = true;
     if (SlotStart_Button) SlotStart_Button.interactable = true;
@@ -946,7 +946,7 @@ public class SlotBehaviour : MonoBehaviour
 
   //bool once = false;
 
-  internal void CheckBonusGame()
+  private void CheckBonusGame()
   {
     _bonusManager.StartBonus(SocketManager.resultData.bonus.BonusSpinStopIndex);
   }
